@@ -8,6 +8,7 @@ import java.util.Scanner;
 // 3- Classe
 public class Medidas {
     // 3.1 - Atributos - Características
+    static Scanner scanner = new Scanner(System.in);
 
     // 3.2 - Métodos e Funções
     public static void main(String[] args){
@@ -21,43 +22,50 @@ public class Medidas {
         System.out.println("e - Calcular Area Modo Extenso ");
         System.out.println("i - If Simples");
         System.out.println("r - Contagem Regressiva de 10 a 0");
+        System.out.println("z - Divisão por Zero - Try/Catch");
+        System.out.println("s - Sair");
         System.out.println("Digite a opção desejada: ");
         String opcao = scanner.next();
 
-        // switch = selecionar o comportamento do programa conforme a escolha do programa ou do software
+            // switch = selecionar o comportamento do programa conforme a escolha do programa ou do software
 
-        // String opcao = "curto";
+            // String opcao = "curto";
 
-        switch (opcao){
-            case "c":
-            case "C":
-                System.out.println("Você escolheu executar o método calcularAreaModoCurto");
-                calcularAreaModoCurto();
-                break;
-            case "d":
-            case "D":
-                System.out.println("Você escolheu executar o método contarAteDez");
-                contarAteDez();
-                break;
-            case "e":
-            case "E":
-                System.out.println("Você escolheu executar o método calcularAreaModoExtenso");
-                calcularAreaModoExtenso();
-                break;
-            case "i":
-            case "I":
-                System.out.println("Você escolheu executar o método ifSimples");
-                ifSimples();
-                break;
-            case "r":
-            case "R":
-                System.out.println("Você escolheu executar o método contagemRegressiva");
-                contagemRegressiva();
-                break;
-            default:
-                System.out.println("Você escolheu outro valor que não tem uma ação associada");
-                break;
-        }
+            switch (opcao) {
+                case "c":
+                case "C":
+                    System.out.println("Você escolheu executar o método calcularAreaModoCurto");
+                    calcularAreaModoCurto();
+                    break;
+                case "d":
+                case "D":
+                    System.out.println("Você escolheu executar o método contarAteDez");
+                    contarAteDez();
+                    break;
+                case "e":
+                case "E":
+                    System.out.println("Você escolheu executar o método calcularAreaModoExtenso");
+                    calcularAreaModoExtenso();
+                    break;
+                case "i":
+                case "I":
+                    System.out.println("Você escolheu executar o método ifSimples");
+                    ifSimples();
+                    break;
+                case "r":
+                case "R":
+                    System.out.println("Você escolheu executar o método contagemRegressiva");
+                    contagemRegressiva();
+                    break;
+                case "z":
+                case "Z":
+                    System.out.println("Você escolheu executar o método divisaoPorZero");
+                    divisaoPorZero();
+                    break;
+                default:
+                    System.out.println("Você escolheu outro valor que não tem uma ação associada");
+                    break;
+            }
     }
 
     public static void ifSimples(){
@@ -118,6 +126,11 @@ public class Medidas {
       for(int numero = 10; numero > -1; numero--){
           System.out.println(numero);
       }
+  }
+
+  public static void divisaoPorZero(){
+      System.out.println("Qual é o dividendo? (Número a ser dividido) ");
+      int dividendo
   }
 
 }
